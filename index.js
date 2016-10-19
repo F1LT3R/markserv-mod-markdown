@@ -1,14 +1,19 @@
-Promise = require('bluebird');
-
 const name = 'markserv-mod-markdown';
 
-const handleRequest = (req) => {
+// Includes
+const Promise = require('bluebird');
+
+// Http Request Modifier
+const httpResponseModifier = requestPath => {
   return new Promise((resolve, reject) => {
-    // {statusCode, contentType, data}
-    let payload;
+    console.log(requestPath);
+    // console.log(module.exports.configure);
+    // console.log(module.exports.Markconf);
+
+    const result = requestPath;
 
     // Pass Back to HTTP Request Handler or HTTP Exporter
-    payload = {
+    const payload = {
       statusCode: 200,
       contentType: 'text/html',
       data: result
@@ -21,5 +26,5 @@ const handleRequest = (req) => {
 
 module.exports = {
   name,
-  handleRequest
+  httpResponseModifier
 };
