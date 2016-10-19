@@ -1,0 +1,25 @@
+{
+  "name": "markserv-mod-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "f1lt3r",
+  "license": "GPL-3.0",
+  "xo": {
+    "esnext": true,
+    "space": 2,
+    "globals": [
+      "it",
+      "describe",
+      "beforeEach"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "handlebars": "^4.0.5",
+    "marked": "^0.3.6"
+  }
+}
