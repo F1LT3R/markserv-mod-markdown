@@ -1,10 +1,6 @@
-const name = 'markserv-mod-markdown';
-
-// Includes
 const Promise = require('bluebird');
 
-// Http Request Modifier
-const httpResponseModifier = requestPath => {
+module.exports = requestPath => {
   return new Promise((resolve, reject) => {
     console.log(requestPath);
     // console.log(module.exports.configure);
@@ -22,9 +18,4 @@ const httpResponseModifier = requestPath => {
     // return payload;
     resolve(payload);
   });
-};
-
-module.exports = {
-  name,
-  httpResponseModifier
 };
