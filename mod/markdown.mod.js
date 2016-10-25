@@ -1,21 +1,32 @@
+const markserv = require('markserv-cli');
+
 const Promise = require('bluebird');
+const Handlebars = require('handlebars');
+const marked = require('marked');
 
-module.exports = requestPath => {
-  return new Promise((resolve, reject) => {
-    console.log(requestPath);
-    // console.log(module.exports.configure);
-    // console.log(module.exports.Markconf);
+markserv(plugin => {
+  // console.log(plugin);
 
-    const result = requestPath;
+  return requestPath => {
+    return new Promise((resolve, reject) => {
+      // console.log(plugin.meta);
 
-    // Pass Back to HTTP Request Handler or HTTP Exporter
-    const payload = {
-      statusCode: 200,
-      contentType: 'text/html',
-      data: result
-    };
+      markserv.fs.readfile(requestPath)
+      .then(contents => {
+        console.log(contents);
+      });
 
-    // return payload;
-    resolve(payload);
-  });
-};
+      const result = requestPath;
+
+      // Pass Back to HTTP Request Handler or HTTP Exporter
+      const payload = {
+        statusCode: 200,
+        contentType: 'text/html',
+        data: result
+      };
+
+      // return payload;
+      resolve(payload);
+    });
+  };
+});
