@@ -1,9 +1,9 @@
 {
-  "name": "markserv-mod-markdown",
+  "name": "ms-contrib-mod.markdown",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/markdown.mod.js",
-  "template": "lib/markdown.tpl.html",
+  "main": "lib/ms-contrib-mod.markdown.js",
+  "template": "lib/ms-contrib-mod.tmpl.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
