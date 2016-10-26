@@ -52,9 +52,11 @@ markserv(plugin => {
       .then(compileTemplate)
       .then(preparePayload)
       .then(payload => {
+        markserv.log.trace(plugin.name + ': ' + request);
         resolve(payload);
       })
       .catch(err => {
+        markserv.log.error(plugin.name, request, err);
         reject(err);
       });
     });
