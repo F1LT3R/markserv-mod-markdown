@@ -2,8 +2,8 @@
   "name": "markserv-mod-markdown",
   "version": "1.0.0",
   "description": "",
-  "main": "mod/markdown.mod.js",
-  "template": "mod/markdown.tpl.html",
+  "main": "lib/markdown.mod.js",
+  "template": "lib/markdown.tpl.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
